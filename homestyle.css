@@ -4,8 +4,9 @@
 }
 
 body {
-    padding: 50px 150px;
     margin: 0 auto ;
+    position: relative;
+    top: 40px;
 }
 #nav {
     margin-bottom: 90px;
@@ -106,41 +107,41 @@ h1 {
     font-weight: 300px;
     position: relative;
     top: 20px;
-    overflow: scroll;
 }
 .image-1 {
     position: sticky;
-    left: 550px;
+    left: 600px;
     box-sizing: border-box;
     height: 320px;
     width: 500px;
-    bottom: 200px;
+    bottom: 100px;
 }
 .image-2 {
     position: relative;
-    bottom: 250px;
+    bottom: 100px;
     width: 80%;
     opacity: 0.2;
 }
 .image-3{
     position: relative;
-    left:550px;
-    bottom: 800px;
+    left:100px;
+    bottom: 1000px;
 }
 .image-4{
     position: relative;
     bottom: 800px;
-    right: 300px;
+    left: 150px;
     width: 470px;
     height: 280px;
+    
 }
 .image-5 {
     position: sticky;
-    left: 655px;
+    left: 450px;
     box-sizing: border-box;
     height: 320px;
     width: 500px;
-    bottom: 540px;
+    bottom: 700px;
 }
 
 /*<!-- HTML !-->
@@ -188,14 +189,4 @@ h1 {
     box-shadow: none;
     transform: translateY(0);
 }
-footer {
-    position: fixed;
-    bottom: 0px;
-}
-#mail,
-#whatsapp img {
-    display: inline-block;
-    margin: 40px, auto;
-    width: 2px;
-    height: 2px;
-}
+
