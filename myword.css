@@ -8392,6 +8392,7 @@ color: #333;
     background-color: #000000;
 }
 .image-holder{
+    padding-right: 2opx;
     background-image: url("https://i.pinimg.com/736x/1d/b7/a1/1db7a136dfd17d04b8857115a63206b1.jpg");
 }
 
