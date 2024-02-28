@@ -8299,7 +8299,7 @@ color: #333;
 }
 #image-1{
     position: relative;
-    top: 70px;
+    top: 79px;
     left: 20px;
     margin: 0px;
     border: burlywood solid 5px;
@@ -8312,7 +8312,7 @@ color: #333;
     display: inline-block;
     position: relative;
     bottom: 220px;
-    left: 350px;
+    left: 330px;
     margin: 0px;
     border: burlywood solid 5px;
     box-sizing: border-box;
@@ -8324,7 +8324,7 @@ color: #333;
     display: inline-block;
     position: relative;
     bottom: 220px;
-    left: 400px;
+    left: 350px;
     margin: 0px;
     border: burlywood solid 5px;
     box-sizing: border-box;
@@ -8340,15 +8340,15 @@ color: #333;
     margin: 0px;
     border: burlywood solid 5px;
     box-sizing: border-box;
-    max-height: 300px;
+    max-height: 330px;
     max-width: 300px;
     
 }
 #image-5{
     display: inline-block;
     position: relative;
-    bottom: 380px;
-    left: 350px;
+    bottom: 400px;
+    left: 330px;
     margin: 0px;
     border: burlywood solid 5px;
     box-sizing: border-box;
@@ -8359,8 +8359,8 @@ color: #333;
 #image-6{
     display: inline-block;
     position: relative;
-    bottom: 380px;
-    left: 400px;
+    bottom: 400px;
+    left: 350px;
     margin: 0px;
     border: burlywood solid 5px;
     box-sizing: border-box;
