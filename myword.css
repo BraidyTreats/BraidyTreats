@@ -1289,11 +1289,6 @@ color: #333;
         display: none;
     }
     
-    /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-    .infinity-end.neverending .site-footer {
-        display: block;
-    }
-    
     /*--------------------------------------------------------------
     # Media
     --------------------------------------------------------------*/
@@ -3523,28 +3518,7 @@ color: #333;
         color: #fff;
     }
     
-    .service-section.style-1 .widget_bttk_icon_text_widget .rtc-itw-inner-holder a.btn-readmore::before,
-    .recent-post-section .grid article a.btn-readmore::before,
-    .page-template-service .site-main .widget_bttk_icon_text_widget a.btn-readmore:before,
-    .shop-popular .product-image a.btn-readmore:before {
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
-        background-color: var(--primary-color);
-        background-size: 8px;
-        background-position: center;
-        border-radius: 100%;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: 0;
-        z-index: 1;
-        text-indent: 0;
-        color: #fff;
-        -webkit-transition: all ease 0.35s;
-        -moz-transition: all ease 0.35s;
-        transition: all ease 0.35s;
-    }
+    
     
     .service-section.style-1 .widget_bttk_icon_text_widget .rtc-itw-inner-holder a.btn-readmore:hover::before,
     .recent-post-section .grid article a.btn-readmore:hover::before,
@@ -3854,10 +3828,7 @@ color: #333;
     /*==============================
     RECENT POST SECTION
     =============================*/
-    .recent-post-section {
-        margin: 80px 0;
-        text-align: center;
-    }
+    
     
     section.recent-post-section .grid {
         margin-top: 60px;
@@ -4049,7 +4020,7 @@ color: #333;
         line-height: 1.8;
     }
     
-    .site-footer .widget_bttk_contact_social_links p {
+    . .widget_bttk_contact_social_links p {
         color: #fff;
     }
     
@@ -8233,9 +8204,7 @@ color: #333;
         margin-top: 10px;
     }
 
-.container-2{
-    
-}
+
 .service-image{
     height: 370px;
     width: 370px;
@@ -8384,20 +8353,20 @@ color: #333;
     font-size: 60px;
 }
 .service-header a{
-    color: yellow;
+    color: hsla(320, 100%, 40%, 1);
     text-decoration: none;
     display: inline-block;
     height: 120px;
     width: 100%;
-    background-color: #000000;
+    background-color: hsla(340, 5%, 50%, 0);
 }
 .image-holder{
-    padding-right: 2opx;
-    background-image: url("https://i.pinimg.com/736x/1d/b7/a1/1db7a136dfd17d04b8857115a63206b1.jpg");
+    padding-right: 20px;
+    background-color: hsla(320, 20%, 40%, 0.1);
 }
 
 h3 {
-    color: yellow;
+    color: black;
 }
 p{
     font-size: 24px;
@@ -8405,3 +8374,10 @@ p{
 .contact {
     font-size: 20px;
 }
+.recent-post-section {
+    margin: 80px 0;
+    text-align: center;
+    background-color: hsla(320, 100%, 80%, 0.18);
+    color: black;
+}
+
