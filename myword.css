@@ -2,15 +2,31 @@
     margin: 0px;
     padding: 0px;
 }
+@media screen {(max-width: 600px){
+    }
+    .site-name {
+    display: inline-block;
+    text-wrap: none;
+    min-width: 500px;
+    min-height: 50px;
+    left: 37px;
+    position: relative;
+    bottom: 600px;
+    font-size: 77pxpx;
+    }
+    }
+
+
 body {
     padding: 10px;
-    display: inline-flex;
-    min-width: 400px;
+    /*background-color: pink;*/
 }
 nav {
+    display: inline-flex;
     background-color: white;
     height: 40px;
-    width: 1200px;
+    min-width: 570px;
+    max-width: 100%;
     background-color: #f5e8aa;
     position: fixed;
     z-index: 100;
@@ -21,7 +37,7 @@ nav a{
     background-color: lightsalmon;
     width: 200px;
     height: 20px;
-    margin-right: 20px;
+    margin-right: 30px;
     padding: 10px;
     font-size: 15px;
     text-align: center;
@@ -57,29 +73,29 @@ nav .appointment-button:active {
     margin-top: 24px;
 }
 .appointment-button {
-    position: relative;
-    left: 540px;
-    height: 25px;
+    height: 20px;
     background-color: lightcoral;
     color: #000000;
 }
 
 .banner {
+    
     width: 100%;
     height: 600px;
 }
 .site-name {
-    box-sizing: border-box;
-    min-width: 400px;
+    display: inline-flex;
+    text-wrap: none;
+    min-width: 200px;
     min-height: 50px;
     left: 37px;
     position: relative;
     bottom: 450px;
-    font-size: 100px;
+    font-size: 77px;
     left: 10px;
     color:#ff8680;
-    position: sticky;
-    bottom: 180px;
+    /*position: sticky;
+    bottom: 180px;*/
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
@@ -87,15 +103,10 @@ nav .appointment-button:active {
 .site-name:hover {
     color: purple;
 }
-main {
-    background-color: rgba(53, 8, 81, 0.2);
-    height: 600px;
-}
-
 
 .site-footer {
     position: relative;
-    top: 40px;
+    top: 1236px;
     background-color: teal;
     height: 200px;
     font-size: 12px;
@@ -138,12 +149,7 @@ main {
 ul {
     list-style-type: none;
 }
-.whatsapp-logo,
-.contact {
-    position: relative;
-    left: 50px;
-    top: 100px;
-}
+
 .copy {
     display: inline-flex;
     position: relative;
@@ -166,7 +172,7 @@ ul {
     width: 300px;
     align-items: center;
     position: relative;
-    left: 38%;
+    left: 25%;
     bottom: 11px;
     font-size: 24px;
     color: #f5e8aa;
@@ -174,3 +180,172 @@ ul {
 ul li{
     margin-top: 10px;
 }
+ul a {
+    color: #f5e8aa;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+.welcome {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    background-color: ;
+    text-wrap: wrap;
+    width: 50%;
+    height: 550px;
+    position: relative;
+    left: 262px;
+    bottom: 121px;
+    font-size: 20px;
+    color: sienna;
+    gap: 20px;
+}
+
+.main {
+    display: inline-flex;
+    width: 600px;
+    position: relative;
+    top: 68px;
+    margin-bottom: 40px;
+    
+}
+.main h2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 222%;
+    padding-bottom: 30px;
+    text-align: center;
+}
+td{
+    border-bottom: solid 2px rgba(255, 192, 203, 0.957);
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 90%;
+    width: 150px;
+    text-align: center;
+    font-weight: 50px;
+    position: relative;
+    right: 270px;
+}
+.col {
+    background-color: rgba(240, 128, 128, 0.434);
+}
+.money {
+    background-color: rgba(255, 192, 203, 0.429);
+}
+td:hover {
+    background-color: rgba(165, 42, 42, 0.779);
+    color: white;
+}
+
+.images {
+    display: inline-flex;
+    flex-direction: row;
+    text-wrap: wrap;
+    position: relative;
+    bottom: 620px;
+    left: 123px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    align-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
+    background-image: url("https://t4.ftcdn.net/jpg/01/16/88/37/240_F_116883786_wuckft1sNw1ouQfJ6FuquZnxea3qBlxy.jpg");
+}
+.image .one {
+    display: flex;
+    
+    text-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.two {
+    display: flex;
+    text-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.three {
+    display: flex;
+    text-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    flex-direction: row;
+}
+.reviews p{
+    display: inline-flex;
+    height: 80px;
+    justify-content: space-between;
+    align-content: space-around;
+    color: sienna;
+}
+.extra {
+    display: inline-flex;
+    width: 600px;
+    height: 400px;
+    justify-content: space-between;
+    align-content: space-around;
+    color: sienna;
+    background-color: #000000;
+    gap: 40px;
+}
+.extra1 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+.extra2 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+#rev1 {
+    border-radius: 50%;
+    position: relative;
+    right: 373px;
+    bottom: 501px;
+}
+#rev2 {
+    border-radius: 50%;
+    position: relative;
+    left: 299px;
+    bottom: 516px;
+}
+.first {
+    position: relative;
+    left: 276px;
+    bottom: 1007px;
+    width: 300px;
+}
+.second {
+    position: relative;
+    right: 267px;
+    bottom: 1140px;
+    width: 410px;
+}
+.third {
+    position: relative;
+    right: 200px;
+    bottom: 814px;
+}
+
