@@ -128,7 +128,7 @@ nav .appointment-button:active {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 16%;
+    top: 25%;
     grid-area: main;
     grid-column: 1/span 3;
     grid-row: 3;
