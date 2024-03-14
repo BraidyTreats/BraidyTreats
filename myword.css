@@ -19,7 +19,7 @@ nav {
 }
 nav a {
     background-color: lightsalmon;
-    display: block;
+    display: inline-block;
     width: 200px;
     height: 20px;
     margin-bottom: 30px;
@@ -45,12 +45,6 @@ nav .home:active {
 nav .service:active {
     background-color: white;
     color: white;
-    box-shadow: 0px 0px;
-    margin-top: 24px;
-}
-nav .appointment-button:active {
-    background-color: white;
-    color: blue;
     box-shadow: 0px 0px;
     margin-top: 24px;
 }
@@ -176,8 +170,64 @@ nav .appointment-button:active {
 main {
     display: inline-flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 10px;
 }
+.service {
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 30%;
+    align-content: space-around;
+    gap: 40px;
+    /*display: block;
+    text-wrap: wrap;
+    max-width: 200px;
+    height: 300px;*/
+}
+
+/* CSS */
+.service a {
+    appearance: none;
+    background-color: black;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: lightcoral;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+.service a:hover {
+    color: black;
+    background-color: lightcoral;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.service a:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
 .image-holder {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
