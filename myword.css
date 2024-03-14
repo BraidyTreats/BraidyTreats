@@ -10,8 +10,8 @@ body {
 
 nav {
     display: block;
-    width: 50px;
-    background-color: ;
+    width: 250px;
+    background-color: transparent;
     grid-area: nav;
     grid-column: 1;
     grid-row: 1;
@@ -141,14 +141,12 @@ nav .service:active {
 }
 .D {
     background-color: #A23900;
-    color: black;
+    color: #AA8C39;
     display: inline-flex;
     flex-direction: column;
-    
     align-items: center;
-    
     text-wrap: wrap;
-    width: 400px;
+    width: 450px;
     position: relative;
     left: 26%;
     top: 300px;
