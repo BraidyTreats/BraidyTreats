@@ -1,192 +1,168 @@
-body {
-    max-width: ;
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*editing the container of the body element into grid with 6 rows*/
+
+.container {
     display: grid;
-    grid-template-areas: "nav nav nav"
-                        "site-banner main D"
-                        "welcome main main";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 12% 1fr 1fr;
+    grid-template-areas:"nav"
+                        "banner"
+                        "welcome"
+                        "services-section"
+                        "prices"
+                        "contact-and-location"
+                        "footer";
+    grid-template-rows: 30px 0.1fr 0.2fr 0.01fr 1.3fr 0.2fr 0.15fr;
 }
 
-nav {
-    display: block;
-    width: 250px;
-    background-color: transparent;
+.navigation {
     grid-area: nav;
-    grid-column: 1;
-    grid-row: 1;
-    z-index: 10;
+    background-color: transparent
+    grid-row: 1/2;
 }
-nav a {
+.navigation button{
+    appearance: button;
     background-color: lightsalmon;
-    display: inline-block;
-    width: 200px;
-    height: 20px;
-    margin-bottom: 30px;
-    padding: 10px;
-    font-size: 24px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    color: black;
-}
-nav a:hover{
-    background-color: lightcoral;
-    color: white;
-    box-shadow: 0px 0px;
-}
-nav .home:active {
-    background-color: lightcoral;
-    color: white;
-    box-shadow: 0px 0px;
-    margin-top: 24px;
-}
-nav .service:active {
-    background-color: white;
-    color: white;
-    box-shadow: 0px 0px;
-    margin-top: 24px;
-}
-.appointment-button {
-    height: 20px;
-    background-color: lightcoral;
-    color: #000000;
-}
-.appointment-button:hover {
-    background-color: red;
-}
-
-
-.site-banner {
-    background-color: white;
-    grid-area: site-banner;
-    grid-column: 1/4;
-    grid-row: 1/3;
-    z-index: 5;
-    height: ;
-}
-.site-banner img {
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
     box-sizing: border-box;
-    object-fit: contain;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 10px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 15%;
+    float: right;
+}
+
+.navigation button:hover {
+    background-color: lightcoral;
+    color: white;
+    box-shadow: 0px 0px;
+}
+
+/*Editing of site banner area, image, and name display*/
+.banner {
+    grid-area: banner;
+    grid-row: 2/3;
+    margin-bottom: 0px;
+    height: 90%;
+    padding: 1%;
+}
+.banner img{
+    box-sizing: border-box;
+    object-fit: cover;
     width: 100%;
-    height: 60%;
+    height: 40%;
+    opacity: 0.5;
+    margin-bottom: 0px;
 }
 
 .site-name {
-    display: inline-flex;
-    text-wrap: none;
-    min-width: 150px;
-    min-height: 50px;
-    position: relative;
-    bottom: 300px;
-    font-size: 77px;
-    left: 90px;
-    color:#ff8680;
-    /*position: sticky;
-    bottom: 180px;*/
-    font-family: "Pacifico", cursive;
+    font-size: 6rem;
+    font-family: "Sofia", cursive;
     font-weight: 400;
     font-style: normal;
-}
-.site-name:hover {
-    color: purple;
-}
-
-
-.welcome {
-    background-color: #B28B77;
-    opacity: 1;
-    grid-area: welcome;
-    grid-column: 1/span 3;
-    grid-row: 2;
-    z-index: 10;
-    text-align: center;
-    display: inline-flex;
+    display: inline-block;
     position: relative;
-    top: 300px;
-    flex-direction: column;
-    align-items: center;
-    align-content: space-around;
-    text-wrap: wrap;
-    width: 50%;
-    /*height: 550px;*/
-    font-size: 20px;
-    color: sienna;
-    border: solid 2px tan;
-    box-sizing: border-box;
-    height: 400px;
+    bottom: 35%;
+    left: 5%;
+    color:hsl(3, 100%, 60%);
 }
-.main {
-    background-color: ;
+.site-mantra {
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    position: relative;
+    bottom: 30%;
+    right: 0.55%;
+    font-size: 3rem;
+}
+
+/*Editing the welcome section of the page*/
+.welcome-section {
+    grid-area: welcome;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    background-color: tan;
+    grid-row: 2/3;
     position: relative;
     top: 25%;
-    grid-area: main;
-    grid-column: 1/span 3;
-    grid-row: 3;
-    z-index: 10;
+    height: 15%;
+    gap: 15px;
+    text-wrap: wrap;
+    font-size: 1.4rem;
 }
-.main h2 {
+.welcome-section div{
+    width: 40%;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/*Third section: Editiong the service section containing images*/
+
+.services-container {
+    grid-area: services-section;
+    background-image: url("https://st3.depositphotos.com/32273002/37115/i/450/depositphotos_371152428-stock-photo-cement-mortar-white-background-texture.jpg");
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    position: relative;
+    bottom: 150%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.services-description {
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: space-around;
+        justify-content: flex-start;
+        gap: 70px;
+        padding: 10%;
+        border: solid 3px sienna;
+}
+.services-description h2{
     font-family: "Dancing Script", cursive;
     color: sienna;
-    font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
-    font-size: 222%;
+    font-size: 1.6rem;
     padding-bottom: 30px;
     text-align: center;
-    background-color: ;
 }
-.D {
-    background-color: #A23900;
-    color: #AA8C39;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    text-wrap: wrap;
-    width: 450px;
-    position: relative;
-    left: 26%;
-    top: 300px;
-    grid-area: D;
-    grid-column: 2/4;
-    grid-row: 2;
-    border: solid 2px tan;
-    z-index: 100;
-    box-sizing: border-box;
-    height: 400px;
+.services-description p{
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
-.main img {
-    box-sizing: border-box;
-    max-height: 200px;
-    max-width: 200px;
-    object-fit: contain;
-}
-main {
-    display: inline-flex;
-    flex-direction: row;
-    gap: 10px;
-}
-.service {
-    display: flex;
-    flex-direction: column;
-    text-wrap: wrap;
-    align-items: center;
-    box-sizing: border-box;
-    max-width: 30%;
-    align-content: space-around;
-    gap: 40px;
-    /*display: block;
-    text-wrap: wrap;
-    max-width: 200px;
-    height: 300px;*/
-}
-
-/* CSS */
-.service a {
+.services-description a {
     appearance: none;
     background-color: black;
     border: 2px solid #1A1A1A;
@@ -214,39 +190,89 @@ main {
     will-change: transform;
 }
 
-.service a:hover {
+.services-description a:hover {
     color: black;
     background-color: lightcoral;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
 
-.service a:active {
+.services-description a:active {
     box-shadow: none;
     transform: translateY(0);
 }
 
-.image-holder {
+/*Editing images in services section*/
+.service-images-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
 }
-td{
+.services-section img {
+    box-sizing: border-box;
+    max-height: 200px;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+/*Fourth section: Editing the Price section of the page*/
+.prices {
+    grid-area: prices;
+    grid-row: 4/6;
+    color: white;
+    color: sienna;
+    position: relative;
+    bottom: 30%;
+}
+header {
+    margin-top: 0px;
+    position: relative;
+    bottom: 5%;
+    left: 40%;
+    font-size: 1.5rem;
+}
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.list h3 {
+    width: 12%;
+}
+
+/*table edits*/
+td {
     border-bottom: solid 2px rgba(255, 192, 203, 0.957);
     padding: 10px;
     text-transform: uppercase;
     font-size: 90%;
-    width: 150px;
+    width: 75%;
     text-align: center;
     font-weight: 50px;
 }
-.col {
+
+.column {
     background-color: rgba(240, 128, 128, 0.434);
+    font-weight: 50px;
 }
-.money {
-    background-color: rgba(255, 192, 203, 0.429);
+.table-style {
+    font-size: 1.4rem;
+}
+.table-braid-length{
+    font-size: 1.4rem;
 }
 td:hover {
     background-color: rgba(165, 42, 42, 0.779);
     color: white;
+}
+.contact-and-location {
+    grid-area: contact-and-location;
+    background-color: bisque;
+    grid-row: 5/7;
+} 
+footer {
+    grid-area: footer;
+    background-color: tomato;
+    grid-row: 7/8;
 }
