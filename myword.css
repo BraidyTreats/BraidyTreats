@@ -5,8 +5,14 @@
 
 
 /*editing the container of the body element into grid with 6 rows*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
 
 .container {
+    box-sizing: border-box;
+    max-height: 600px;
     display: grid;
     grid-template-areas:"nav"
                         "banner"
@@ -15,17 +21,18 @@
                         "prices"
                         "contact-and-location"
                         "footer";
-    grid-template-rows: 30px 0.1fr 0.2fr 0.01fr 1.3fr 0.2fr 0.15fr;
+    grid-template-rows: 30px 0.1fr 0.2fr 0.01fr 0.45fr 50px 150px;
+    grid-template-columns: 1fr;
 }
 
 .navigation {
     grid-area: nav;
-    background-color: transparent
+    background-color: transparent;
     grid-row: 1/2;
 }
 .navigation button{
     appearance: button;
-    background-color: lightsalmon;
+    background-color: #CD5C5C;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
@@ -35,7 +42,7 @@
     display: inline-block;
     font-family: din-round,sans-serif;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 700px;
     letter-spacing: .8px;
     line-height: 20px;
     margin: 0;
@@ -51,10 +58,14 @@
     -webkit-user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    width: 15%;
-    float: right;
+    width: 20%;
+    position: relative;
+    left: 70%;
 }
-
+nav a{
+    text-decoration: none;
+    color: black;
+}
 .navigation button:hover {
     background-color: lightcoral;
     color: white;
@@ -85,7 +96,7 @@
     font-style: normal;
     display: inline-block;
     position: relative;
-    bottom: 35%;
+    bottom: 42%;
     left: 5%;
     color:hsl(3, 100%, 60%);
 }
@@ -95,9 +106,9 @@
     font-style: normal;
     display: inline-block;
     position: relative;
-    bottom: 30%;
-    right: 0.55%;
-    font-size: 3rem;
+    bottom: 35%;
+    right: 5%;
+    font-size: 2rem;
 }
 
 /*Editing the welcome section of the page*/
@@ -108,33 +119,40 @@
     justify-content: center;
     align-items: center;
     align-content: space-around;
-    background-color: tan;
+    background-color: #CD5C5C;
     grid-row: 2/3;
     position: relative;
     top: 25%;
-    height: 15%;
+    height: 27%;
     gap: 15px;
     text-wrap: wrap;
     font-size: 1.4rem;
+    padding-bottom: 10%;
+    z-index: 10;
 }
 .welcome-section div{
     width: 40%;
     font-size: 1.2rem;
-    text-align: justify;
+    text-align: none;
+}
+.welcome-section h2{
+    position: relative;
+    top: 11%;
 }
 
 /*Third section: Editiong the service section containing images*/
 
 .services-container {
     grid-area: services-section;
-    background-image: url("https://st3.depositphotos.com/32273002/37115/i/450/depositphotos_371152428-stock-photo-cement-mortar-white-background-texture.jpg");
+    background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL2pvYjE1MzEtYmFja2dyb3VuZC0wNC5qcGc.jpg");
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 30% 70%;
     position: relative;
-    bottom: 150%;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    bottom: 80%;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    padding-top: 15%;
 }
 
 .services-description {
@@ -146,7 +164,7 @@
         justify-content: flex-start;
         gap: 70px;
         padding: 10%;
-        border: solid 3px sienna;
+        border: solid 3px #F0E3CE;
 }
 .services-description h2{
     font-family: "Dancing Script", cursive;
@@ -219,26 +237,32 @@
 .prices {
     grid-area: prices;
     grid-row: 4/6;
-    color: white;
     color: sienna;
     position: relative;
-    bottom: 30%;
+    bottom: 605px;
+    /*background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL2pvYjE1MzEtYmFja2dyb3VuZC0wNC5qcGc.jpg");*/
+    
 }
+
 header {
-    margin-top: 0px;
     position: relative;
     bottom: 5%;
-    left: 40%;
-    font-size: 1.5rem;
+    font-family: "Dancing Script", cursive;
+    color: #c7913b;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 1.8rem;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: hsla(0, 30%, 58%, 0.1);
+    padding-top: 9%;
+    padding-bottom: 1%;
 }
-.list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
+
+
 .list h3 {
-    width: 12%;
+    font-size: 1.5rem;
+    text-decoration: underline;
 }
 
 /*table edits*/
@@ -268,11 +292,119 @@ td:hover {
 }
 .contact-and-location {
     grid-area: contact-and-location;
-    background-color: bisque;
-    grid-row: 5/7;
+    position: relative;
+    top: 60%;
+    display: flex;
+    flex-direction: row;
+    grid-row: 5/6;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-around;
+    color: black;
+    font-size: 1.2rem;
+    z-index: 10;
 } 
+.contact-and-location h3 {
+    font-size: 1.6rem;
+}
+.contact-and-location button{
+    appearance: button;
+    background-color: black;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #CD5C5C;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600px;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 3% ;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 50%;
+    
+}
+.contact-and-location a{
+    text-decoration: none;
+    color: sienna;
+}
+
+.contact-and-location button:hover{
+    background-color: rgb(215, 93, 72);
+    color: black;
+}
+.contact-and-location button:active{
+    background-color: tomato;
+    color: black;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+    background-color: #CD5C5C;
+    height: 150%;
+    width: 40%;
+    gap: 1.5%;
+    font-size: 1.4rem;
+    font-weight: 700px;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+    background-color: #CD5C5C;
+    height: 150%;
+    width: 40%;
+    gap: 5%;
+    font-size: 1.4rem;
+    font-weight: 700px;
+}
+.contact img{
+    height: 20px;
+    width: 20px;
+}
+#instagram,
+#whatsapp {
+    display: inline-block;
+    padding: 5%;
+    font-size: 1.3rem;
+}
+#instagram a,
+#whatsapp a{
+    color: black;
+}
+#instagram a:hover,
+#whatsapp a:hover{
+    color: cyan;
+}
+#instagram a:active,
+#whatsapp a:active{
+    color: cyan;
+}
+
 footer {
     grid-area: footer;
-    background-color: tomato;
+    background-color: #CD5C5C;
+    position: relative;
+    top: 300%;
     grid-row: 7/8;
+    margin-top: 0px;
 }
