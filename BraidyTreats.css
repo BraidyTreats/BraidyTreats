@@ -4,6 +4,23 @@
 }
 
 
+.prices,
+.contact-and-location{
+        opacity: 0;
+        transform: translate(0, 10vh);
+        transition: all 1.5s;
+    }
+
+.prices.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+    }
+.contact-and-location.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+    }
+
+
 /*editing the container of the body element into grid with 6 rows*/
 body {
     margin: 0px;
@@ -79,6 +96,7 @@ nav a{
     margin-bottom: 0px;
     height: 90%;
     padding: 1%;
+    
 }
 .banner img{
     box-sizing: border-box;
@@ -87,6 +105,13 @@ nav a{
     height: 40%;
     opacity: 0.5;
     margin-bottom: 0px;
+
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.banner img:not(:first-child) {
+    display: none;
 }
 
 .site-name {
