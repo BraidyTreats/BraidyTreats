@@ -3,7 +3,11 @@
     padding: 0px;
 }
 
-
+@keyframes appointment{
+    0%{color: plum; opacity: 1; font-weight: 100px; font-size: 0.5rem;}
+    50%{color: plum; opacity: 1;font-weight: 300px; font-size: 0.5rem;}
+    100%{color: lightcoral; opacity: 1; font-weight: 600px; font-size: 1rem;}
+}
 @keyframes name-move{
     0%{bottom: 0%; color: purple; opacity: 1;}
     20%{opacity: 0.2;}
@@ -281,6 +285,10 @@ nav a{
     touch-action: manipulation;
     width: 100%;
     will-change: transform;
+    animation: appointment;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
 }
 
 .services-description a:hover {
@@ -411,7 +419,10 @@ td:hover {
     vertical-align: middle;
     white-space: nowrap;
     width: 50%;
-    
+    animation: appointment;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
 }
 .contact-and-location a{
     text-decoration: none;
