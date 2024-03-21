@@ -106,7 +106,6 @@ nav a{
     height: 40%;
     opacity: 0.5;
     margin-bottom: 0px;
-    display: block;
     transition: transform 0.2s ease;
 }
 
