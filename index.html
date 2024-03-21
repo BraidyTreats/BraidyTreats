@@ -11,10 +11,11 @@
     <body>
         <div class="container">
             <nav class="navigation">
-                <button><a href="https://calendar.app.google/vs6BeM7VC1T7oH1M6">Make Appointment</a></button>
+                <button><a rel="noopener noreferrer" href="https://calendar.app.google/vs6BeM7VC1T7oH1M6">Make Appointment</a></button>
             </nav>
             <div class="banner">
                 <img src="sitebanner.jpg" alt="site banner">
+                
                 <h1 class="site-name">Braidy Treats</h1>
                 <h2 class="site-mantra">Where every strand weaves elegance...</h2>
             </div>
@@ -31,7 +32,7 @@
                     <div class="services-description">
                         <h2>BraidyTreats Exclusive Services</h2>
                         <p>At BraidyTreats, we specialize in the artistry of hair braiding, offering a wide range of services to suit every style and occasion. Our skilled stylists are dedicated to creating stunning looks that exceed your expectations. Our offers include Box Braids, Knotless, Twists, Conrows, and many others.</p>
-                        </button><a class="appointment-button" href="https://calendar.app.google/vs6BeM7VC1T7oH1M6">Make Appointment</a></button>
+                        </button><a rel="noopener noreferrer"  class="appointment-button" href="https://calendar.app.google/vs6BeM7VC1T7oH1M6">Make Appointment</a></button>
                     </div>
                     <div class="service-images-grid">
                         <img src="image-10.jpg" alt="">
@@ -43,7 +44,7 @@
                         <img src="image-7.jpg" alt="">
                         <img src="image-8.jpg" alt="">
                         <img src="image-9.jpg" alt="">
-                        <img src="image-10.jpg" alt="">
+                        <img src="image-12.jpg" alt="">
                         <img src="back.jpg" alt="">
                         <img src="image-11.jpg" alt="">
                     </div>
@@ -132,8 +133,8 @@
                         <a href="https://www.instagram.com/braidytreats/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram Logo"></a>
                     </div>
                     <div id="whatsapp">
-                        <a href="https://wa.me/15197319231" target="_blank">Whatsapp BraidyTreats</a>
-                        <a href="https://wa.me/15197319231" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="Whatsapp logo"></a>
+                        <a rel="noopener noreferrer"  href="https://wa.me/15197319231" target="_blank">Whatsapp BraidyTreats</a>
+                        <a rel="noopener noreferrer"  href="https://wa.me/15197319231" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="Whatsapp logo"></a>
                     </div>
                 </div>
                 <div class="location">
@@ -145,5 +146,57 @@
             </div>
             <footer> </footer>
         </div>
+        <script>
+            // JavaScript for sliding images in the banner section
+            document.addEventListener('DOMContentLoaded', function() {
+            // Get all banner images
+            var images = document.querySelectorAll('.banner img');
+            var currentImageIndex = 0;
+
+            // Function to show the next image
+            function showNextImage() {
+                // Hide the current image
+                images[currentImageIndex].style.display = 'none';
+                // Increment index or reset to 0 if it exceeds the length
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                // Show the next image
+                images[currentImageIndex].style.display = 'block';
+            }
+
+            // Automatically show next image every 5 seconds
+            setInterval(showNextImage, 5000);
+            });
+
+
+
+            // Function to handle scroll event
+            function handleScroll() {
+                const elements = document.querySelectorAll('.container > .welcome-section, .container > .services-container, .container > .prices, .container > .contact-and-location');
+                elements.forEach(element => {
+                    if (isInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+
+            // Check if an element is in the viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Event listener for scroll event
+            window.addEventListener('scroll', handleScroll);
+
+            // Initial check when the page loads
+            document.addEventListener('DOMContentLoaded', handleScroll);
+
+
+        </script>
     </body>
 </html>
