@@ -4,6 +4,33 @@
 }
 
 
+@keyframes name-move{
+    0%{bottom: 0%; color: purple; opacity: 1;}
+    20%{opacity: 0.2;}
+    50%{opacity: 0.5}
+    80%{opacity: 0.8}
+    100% {bottom: 42%; left: 5%; color: hsl(3, 100%, 60%); opacity: 1;}
+    /*bottom: 42%;
+    left: 5%;
+    color:hsl(3, 100%, 60%);*/
+}
+
+@keyframes mantra-move{
+    0%{bottom: 0%; color: #c7913b; opacity: 1;}
+    20%{opacity: 0.2;}
+    50%{opacity: 0.5}
+    80%{opacity: 0.8}
+    100%{bottom: 37%; color: #1A1A1A; opacity: 1; text-align: center;}
+    /*bottom: 35%;
+    font-size: 2rem;
+    text-align: center;*/
+}
+@keyframes resize{
+    0%{opacity: 0.2; font-size: 1.6rem; color: sienna;}
+    50%{opacity: 0.5; font-size: 1.5rem; color: #c7913b;}
+    100%{opacity: 0.7; font-size: 1.4rem; color: bisque;}
+}
+
 
 .prices,
 .contact-and-location{
@@ -123,6 +150,11 @@ nav a{
     bottom: 42%;
     left: 5%;
     color:hsl(3, 100%, 60%);
+    animation: name-move;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
 }
 .site-mantra {
     font-family: "Sofia", cursive;
@@ -133,6 +165,11 @@ nav a{
     bottom: 35%;
     font-size: 2rem;
     text-align: center;
+    animation: mantra-move;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
 }
 
 /*Editing the welcome section of the page*/
@@ -156,8 +193,14 @@ nav a{
 }
 .welcome-section div{
     width: 40%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: hsla(33, 100%, 88%, 0.7);
     text-align: none;
+    animation: resize;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
 }
 .welcome-section h2{
     position: relative;
