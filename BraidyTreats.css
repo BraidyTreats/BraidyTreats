@@ -20,17 +20,23 @@
     20%{opacity: 0.2;}
     50%{opacity: 0.5}
     80%{opacity: 0.8}
-    100%{bottom: 37%; color: #1A1A1A; opacity: 1; text-align: center;}
+    100%{bottom: 40%; color: #1A1A1A; opacity: 1; text-align: center;}
     /*bottom: 35%;
     font-size: 2rem;
     text-align: center;*/
 }
 @keyframes resize{
     0%{opacity: 0.2; font-size: 1.6rem; color: sienna;}
-    50%{opacity: 0.5; font-size: 1.5rem; color: #c7913b;}
     100%{opacity: 0.7; font-size: 1.4rem; color: bisque;}
 }
 
+@keyframes services-fade{
+    0%{opacity: 0;}
+    25%{opacity: 0.25;}
+    50%{opacity: 0.5;}
+    75%{opacity: 0.7;}
+    100%{opacity: 1;}
+}
 
 .prices,
 .contact-and-location{
@@ -151,8 +157,8 @@ nav a{
     left: 5%;
     color:hsl(3, 100%, 60%);
     animation: name-move;
-    animation-duration: 3s;
-    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-delay: 1s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
 }
@@ -162,12 +168,12 @@ nav a{
     font-style: normal;
     display: inline-block;
     position: relative;
-    bottom: 35%;
+    bottom: 40%;
     font-size: 2rem;
     text-align: center;
     animation: mantra-move;
-    animation-duration: 3s;
-    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-delay: 1s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
 }
@@ -197,14 +203,15 @@ nav a{
     color: hsla(33, 100%, 88%, 0.7);
     text-align: none;
     animation: resize;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-delay: 1s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
 }
 .welcome-section h2{
     position: relative;
-    top: 11%;
+    top: 50%;
+    right: 30%;
 }
 
 /*Third section: Editiong the service section containing images*/
@@ -220,6 +227,7 @@ nav a{
     margin-bottom: 0%;
     padding-bottom: 0%;
     padding-top: 15%;
+    animation: services-fade 5s ease-in 1.5s 1;
 }
 
 .services-description {
