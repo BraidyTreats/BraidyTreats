@@ -231,7 +231,7 @@ nav a{
     margin-bottom: 0%;
     padding-bottom: 0%;
     padding-top: 15%;
-    animation: services-fade 5s ease-in 1.5s 1;
+    animation: services-fade 3s ease-in 0s 1;
 }
 
 .services-description {
